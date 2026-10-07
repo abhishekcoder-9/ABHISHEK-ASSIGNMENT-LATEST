@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>UNTOLD — Discover the Uttarakhand You Haven't Seen</title>
+<meta name="description" content="Discover hidden places, mountain food, local stories, adventures, stays and experiences across Uttarakhand with UNTOLD.">
+<meta property="og:title" content="UNTOLD — Discover the Uttarakhand You Haven't Seen">
+<meta property="og:description" content="Hidden places, mountain food, local stories and adventures across Uttarakhand.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#efe9dd;--ink:#161714;--mut:#6b685e;--green:#5f7d60;--dk:#121311;--cr:#efe9dd;--line:rgba(22,23,20,.2);--ease:cubic-bezier(.16,1,.3,1);--px:clamp(20px,4vw,64px);--serif:'Fraunces',Georgia,serif;--sans:'Inter',system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121311;--ink:#efe9dd;--mut:#a39f92;--line:rgba(239,233,221,.22)}}
+:root[data-theme="dark"]{--bg:#121311;--ink:#efe9dd;--mut:#a39f92;--line:rgba(239,233,221,.22)}
+*,*::before,*::after{box-sizing:inherit;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--sans);overflow-x:hidden}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+.serif,h1,h2,h3{font-family:var(--serif);font-weight:300;letter-spacing:-.02em;line-height:1}
+.lbl{font:500 11px/1.4 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--mut)}
+.wrap{padding:0 var(--px)}
+section{position:relative}
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:calc(20px + env(safe-area-inset-top,0px)) var(--px) 20px;color:#efe9dd;transition:background .5s var(--ease),color .5s var(--ease),padding .5s var(--ease)}
+header.s{background:var(--bg);color:var(--ink);padding-top:calc(12px + env(safe-area-inset-top,0px));padding-bottom:12px;border-bottom:1px solid var(--line)}
+.logo{font:400 22px var(--serif);letter-spacing:.3em}
+nav.d{display:flex;gap:34px}
+.ul{position:relative;font:500 12px var(--sans);letter-spacing:.16em;text-transform:uppercase}
+.ul::after{content:"";position:absolute;left:0;bottom:-4px;height:1px;width:100%;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+.ul:hover::after{transform:scaleX(1);transform-origin:left}
+.btn{display:inline-flex;gap:12px;align-items:center;padding:14px 26px;border:1px solid currentColor;border-radius:999px;font:500 12px var(--sans);letter-spacing:.16em;text-transform:uppercase;transition:background .4s var(--ease),color .4s var(--ease);cursor:pointer;background:none;color:inherit}
+.btn i{font-style:normal;transition:transform .4s var(--ease)}
+.btn:hover{background:var(--ink);color:var(--bg)}.btn:hover i{transform:translateX(5px)}
+.dk .btn:hover,header .btn:hover{background:#efe9dd;color:#121311}
+header.s .btn:hover{background:var(--ink);color:var(--bg)}
+.burger{display:none;background:none;border:0;color:inherit;font:500 12px var(--sans);letter-spacing:.16em;cursor:pointer}
+.menu{position:fixed;inset:0;z-index:60;background:#121311;color:#efe9dd;display:flex;flex-direction:column;justify-content:center;padding:var(--px);clip-path:inset(0 0 100% 0);visibility:hidden;transition:clip-path .8s var(--ease),visibility 0s .8s}
+.menu.o{clip-path:inset(0);visibility:visible;transition:clip-path .8s var(--ease)}
+.menu a{font:300 clamp(38px,11vw,72px)/1.15 var(--serif);display:block;overflow:hidden}
+.menu a span{display:block;transform:translateY(110%);transition:transform .8s var(--ease)}
+.menu.o a span{transform:none}
+.menu a:nth-child(2) span{transition-delay:.05s}.menu a:nth-child(3) span{transition-delay:.1s}.menu a:nth-child(4) span{transition-delay:.15s}.menu a:nth-child(5) span{transition-delay:.2s}.menu a:nth-child(6) span{transition-delay:.25s}
+.menu button{position:absolute;top:calc(20px + env(safe-area-inset-top,0px));right:var(--px);background:none;border:0;color:inherit;font:500 12px var(--sans);letter-spacing:.16em;cursor:pointer}
+/* hero */
+.hero{height:100vh;height:100svh;min-height:600px;background:var(--dk);color:#efe9dd;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:0 var(--px) 48px}
+.hero .bg{position:absolute;inset:-6% 0;clip-path:inset(0 0 100% 0);transition:clip-path 1.6s var(--ease)}
+.hero .bg::after{content:"";position:absolute;inset:0;background:rgba(10,12,10,.38)}
+.loaded .hero .bg{clip-path:inset(0)}
+.hero h1{position:relative;font-size:clamp(46px,10.5vw,170px);text-transform:uppercase;line-height:.92;margin:18px 0 28px}
+.ln{display:block;overflow:hidden;padding-bottom:.06em}
+.ln>span{display:block;transform:translateY(105%);transition:transform 1.2s var(--ease)}
+.loaded .ln>span{transform:none}
+.ln:nth-child(2)>span{transition-delay:.12s}
+.fd{opacity:0;transform:translateY(16px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.loaded .fd{opacity:1;transform:none;transition-delay:.9s}
+.hero .meta{position:relative;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.hero .lbl{color:#d9d2c0}
+.hero p{max-width:380px;color:#e5dfcf}
+.hero .tr{position:absolute;top:50%;right:var(--px);writing-mode:vertical-rl}
+/* marquee */
+.mq{overflow:hidden;border-bottom:1px solid var(--line);padding:22px 0;white-space:nowrap}
+.mq div{display:inline-flex;gap:56px;animation:mq 40s linear infinite;font:300 clamp(22px,3vw,40px) var(--serif);padding-right:56px}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* generic */
+.pad{padding:clamp(80px,12vw,180px) var(--px)}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(40px,6vw,88px)}
+h2{font-size:clamp(40px,7vw,112px);text-transform:uppercase}
+.rv{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.ir{overflow:hidden;position:relative;background:#222}
+.ir>img{clip-path:inset(100% 0 0 0);transform:scale(1.15);transition:clip-path 1.3s var(--ease),transform 1.6s var(--ease)}
+.ir.in>img{clip-path:inset(0);transform:scale(1)}
+.ir.in:hover>img{transform:scale(1.05);transition:transform .9s var(--ease)}
+.manifesto h2{font-size:clamp(34px,6.4vw,104px);max-width:15ch}
+.manifesto .cols{display:grid;grid-template-columns:1fr 1fr;gap:var(--px);margin-top:clamp(40px,6vw,90px)}
+.manifesto p{max-width:46ch;color:var(--mut);font-size:17px}
+/* discover */
+.dg{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(16px,2.4vw,40px);align-items:start}
+.dc{display:block}
+.dc .ir{aspect-ratio:var(--r)}
+.dc h3{font-size:clamp(24px,2.6vw,38px);margin:16px 0 4px;display:flex;justify-content:space-between}
+.dc h3 i{font-style:normal;transition:transform .5s var(--ease)}
+.dc:hover h3 i{transform:translate(6px,-6px)}
+.dc p{color:var(--mut);font-size:14px;max-width:34ch}
+.dc:nth-child(1){grid-column:1/8;--r:4/3}.dc:nth-child(2){grid-column:9/13;--r:3/4;margin-top:12vw}
+.dc:nth-child(3){grid-column:2/6;--r:3/4;margin-top:-6vw}.dc:nth-child(4){grid-column:7/13;--r:16/10}
+/* eat */
+.eat{display:grid;grid-template-columns:5fr 6fr;gap:clamp(30px,6vw,110px);align-items:center;border-top:1px solid var(--line)}
+.eat .ir{aspect-ratio:4/5}
+.eat h3{font-size:clamp(46px,8vw,128px);text-transform:uppercase;margin:14px 0 24px;color:var(--green)}
+.eat p{color:var(--mut);max-width:44ch;margin-bottom:12px}
+.eat ul{list-style:none;padding:0;margin:26px 0 38px;display:flex;flex-wrap:wrap;gap:8px 22px;font:300 22px var(--serif)}
+/* adventure */
+.dk{background:var(--dk);color:#efe9dd}
+.adv{overflow:hidden}
+.adv .big{aspect-ratio:21/9;min-height:320px;margin-bottom:34px}
+.adv .row{display:grid;grid-template-columns:1fr 1fr;gap:var(--px);align-items:end}
+.adv h3{font-size:clamp(34px,5vw,76px);text-transform:uppercase}
+.adv p{color:#bdb7a7;max-width:42ch;margin-bottom:26px}
+.tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
+.tags span{border:1px solid rgba(239,233,221,.25);padding:6px 14px;border-radius:99px;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+/* stories */
+.st{display:grid;grid-template-columns:70px 1fr 160px 120px;gap:20px;align-items:center;padding:28px 0;border-top:1px solid var(--line);position:relative;transition:padding .6s var(--ease)}
+.st:last-child{border-bottom:1px solid var(--line)}
+.st:hover{padding-left:18px}
+.st h3{font-size:clamp(22px,3.2vw,48px);text-transform:uppercase;line-height:1.05}
+.st .th{width:120px;aspect-ratio:4/5;overflow:hidden;justify-self:end;background:#222}
+@media(hover:hover){.st .th{display:none}}
+.pv{position:fixed;left:0;top:0;width:260px;aspect-ratio:4/5;z-index:40;pointer-events:none;overflow:hidden;background:#222;clip-path:inset(100% 0 0 0);transition:clip-path .7s var(--ease);will-change:transform}
+.pv.on{clip-path:inset(0)}.pv img{transform:scale(1.25);transition:transform 1.1s var(--ease)}.pv.on img{transform:scale(1)}
+.stay .sy{display:grid;grid-template-columns:5fr 8fr;gap:clamp(30px,5vw,90px);align-items:end}
+.stay .ir{aspect-ratio:5/4;margin-right:calc(var(--px)*-1)}
+.stay p{color:var(--mut);margin:26px 0 24px;max-width:40ch}
+.st b{font:500 12px var(--sans);letter-spacing:.14em;text-transform:uppercase}
+/* biz / cta */
+.biz{display:grid;grid-template-columns:7fr 5fr;gap:var(--px);align-items:end;border-top:1px solid var(--line)}
+.biz h2{font-size:clamp(36px,6vw,92px)}
+.biz p{color:var(--mut);margin-bottom:24px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.cta{background:var(--dk);min-height:90vh;min-height:90svh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;color:#efe9dd}
+.cta .bg{position:absolute;inset:-12% 0}
+.cta .bg::after{content:"";position:absolute;inset:0;background:rgba(10,12,10,.45)}
+.cta div.c{position:relative;padding:0 var(--px)}
+.cta h2{font-size:clamp(38px,8vw,128px);margin-bottom:40px}
+/* newsletter */
+.nl{display:grid;grid-template-columns:1fr 1fr;gap:var(--px);align-items:end}
+.nl h2{font-size:clamp(34px,5.4vw,84px)}
+.nl form{display:flex;border-bottom:1px solid var(--ink);gap:10px}
+.nl input{flex:1;min-width:0;background:none;border:0;color:inherit;font:400 18px var(--sans);padding:16px 0}
+.nl input:focus{outline:none}.nl form:focus-within{border-color:var(--green)}
+.nl button{border:0;border-radius:0;padding-right:0}
+#ok{margin-top:14px;color:var(--green);min-height:1.6em}
+/* footer */
+footer{padding:80px var(--px) 32px;border-top:1px solid var(--line)}
+footer .big{font:300 clamp(70px,22vw,360px)/.85 var(--serif);letter-spacing:.02em;margin:50px 0 40px}
+footer .g{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+footer li{list-style:none;margin:6px 0}footer ul{padding:0}
+footer .bt{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:60px;padding-top:20px;border-top:1px solid var(--line)}
+@media(max-width:900px){
+nav.d,header>.btn{display:none}.burger{display:block}
+.manifesto .cols,.eat,.adv .row,.biz,.nl,footer .g{grid-template-columns:1fr}
+.dc:nth-child(n){grid-column:1/-1;margin-top:0}.dc:nth-child(2){grid-column:3/13}.dc:nth-child(3){grid-column:1/10}
+.st{grid-template-columns:44px 1fr 72px;gap:6px 14px}.st .th{width:72px}.st .rt{display:none}.st .ct{grid-column:2}
+.hero .tr{display:none}.dg{gap:40px 16px}.stay .sy{grid-template-columns:1fr}.stay .ir{margin-right:0}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+.rv,.fd,.ln>span,.ir>img{opacity:1;transform:none;clip-path:none}.hero .bg{clip-path:none}}
+</style>
+</head>
+<body>
+<header id="hd">
+  <a href="#top" class="logo" aria-label="UNTOLD home">UNTOLD</a>
+  <nav class="d" aria-label="Primary"><a class="ul" href="#discover">Discover</a><a class="ul" href="#eat">Eat</a><a class="ul" href="#adventure">Adventure</a><a class="ul" href="#stay">Stay</a><a class="ul" href="#stories">Stories</a><a class="ul" href="#about">About</a></nav>
+  <a class="btn" href="#discover">Explore <i>→</i></a>
+  <button class="burger" id="bg" aria-expanded="false" aria-controls="menu">MENU</button>
+</header>
+<div class="menu" id="menu" aria-hidden="true">
+  <button id="mc">CLOSE</button>
+  <a href="#discover"><span>Discover</span></a><a href="#eat"><span>Eat</span></a><a href="#adventure"><span>Adventure</span></a><a href="#stay"><span>Stay</span></a><a href="#stories"><span>Stories</span></a><a href="#about"><span>About</span></a>
+</div>
+
+<main id="top">
+<section class="hero">
+  <div class="bg" data-p="0.15"><img data-img="hero" fetchpriority="high" alt="A lone figure beside a bare tree facing a snow-streaked Himalayan peak"></div>
+  <span class="lbl tr fd">Dehradun / 30.1°N</span>
+  <span class="lbl fd" style="position:relative">Uttarakhand / India</span>
+  <h1><span class="ln"><span>The Uttarakhand</span></span><span class="ln"><span>you haven't seen.</span></span></h1>
+  <div class="meta">
+    <p class="fd">Beyond the famous roads, crowded viewpoints and usual itineraries.</p>
+    <div class="fd" style="display:flex;gap:28px;align-items:center;flex-wrap:wrap"><a class="btn" href="#discover">Start exploring <i>→</i></a><span class="lbl">Scroll to discover ↓</span></div>
+  </div>
+</section>
+
+<div class="mq" aria-hidden="true"><div><span>Hidden trails</span><span>·</span><span>Mountain cafés</span><span>·</span><span>Village kitchens</span><span>·</span><span>Forest roads</span><span>·</span><span>Slow mornings</span><span>·</span><span>Hidden trails</span><span>·</span><span>Mountain cafés</span><span>·</span><span>Village kitchens</span><span>·</span><span>Forest roads</span><span>·</span><span>Slow mornings</span><span>·</span></div></div>
+
+<section class="pad manifesto" id="about">
+  <p class="lbl rv">Untold story / 00</p>
+  <h2 class="rv" style="margin-top:22px">You know the places. We want to show you the stories.</h2>
+  <div class="cols">
+    <p class="rv">UNTOLD is a growing collection of places, people, food and experiences that reveal another side of Uttarakhand.</p>
+    <p class="rv">From hidden mountain roads to family-run cafés, forgotten trails and unexpected adventures — we go looking for what is easy to miss.</p>
+  </div>
+</section>
+
+<section class="pad" id="discover" style="padding-top:0">
+  <div class="sh"><div><p class="lbl rv">01 / Discover</p><h2 class="rv" style="margin-top:14px">Discover</h2></div><p class="serif rv" style="font-size:clamp(20px,2vw,28px);max-width:22ch">Places worth taking the long way to.</p></div>
+  <div class="dg" id="dg"></div>
+</section>
+
+<section class="pad eat" id="eat">
+  <div class="ir"><img data-img="eat" alt="A chai maker pouring tea through steam in warm evening light" loading="lazy"></div>
+  <div>
+    <p class="lbl rv">02 / Eat — Food / 04</p>
+    <h2 class="rv" style="margin-top:14px;font-size:clamp(30px,4vw,60px)">A taste of the mountains.</h2>
+    <h3 class="rv">Mandua / Ragi</h3>
+    <p class="rv">Discover the food, ingredients and people that give Uttarakhand its own identity.</p>
+    <ul class="rv"><li>Mandua roti</li><li>Jhangora</li><li>Aloo ke gutke</li><li>Bhatt</li><li>Local chai</li></ul>
+    <a class="btn rv" href="#stories">Taste the untold <i>→</i></a>
+  </div>
+</section>
+
+<section class="pad dk adv" id="adventure">
+  <div class="sh"><div><p class="lbl rv" style="color:#a9a496">03 / Adventure — Adventure / 07</p><h2 class="rv" style="margin-top:14px">Take the longer way.</h2></div></div>
+  <div class="ir big"><img data-img="adventure" alt="Trekkers on a snow-covered Himalayan ridge under a blue sky" loading="lazy" data-p="0.08"></div>
+  <div class="row">
+    <div><p class="lbl" style="color:#a9a496">Featured / Bir Billing</p><h3 class="rv" style="margin-top:12px">Fly above the valley.</h3></div>
+    <div><p class="rv">Paragliding is one of many ways to see the hills differently. UNTOLD discovers and documents experiences like this — and may one day partner with legitimate local operators.</p><a class="btn rv" href="#stories">Find your adventure <i>→</i></a></div>
+  </div>
+  <div class="tags rv"><span>Trekking</span><span>Camping</span><span>Paragliding</span><span>Motorcycle journeys</span><span>Waterfalls</span><span>Sunrise expeditions</span></div>
+</section>
+
+<section class="pad stay" id="stay">
+  <div class="sy">
+    <div><p class="lbl rv">04 / Stay</p><h2 class="rv" style="margin-top:14px">Stay somewhere worth remembering.</h2><p class="rv">Mountain homestays, cabins, forest retreats and village stays — presented as places, not booking listings.</p><a class="btn rv" href="#stories">Find your stay <i>→</i></a></div>
+    <div class="ir"><img data-img="stay" alt="A small white shrine among pines on an Uttarakhand hillside" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="pad" id="stories">
+  <div class="sh"><div><p class="lbl rv">05 / Stories</p><h2 class="rv" style="margin-top:14px">Every place has a story.</h2></div><a class="ul rv" href="#stories">Open the journal →</a></div>
+  <div id="sl"></div>
+</section>
+
+<section class="pad biz">
+  <h2 class="rv">Have a story worth telling?</h2>
+  <div><p class="rv">UNTOLD helps extraordinary local cafés, homestays, adventure operators, restaurants and experiences get discovered by the right people.</p><div class="btns rv"><a class="btn" href="#join">Work with UNTOLD <i>→</i></a><a class="btn" href="#join">Submit a place</a></div></div>
+</section>
+
+<section class="cta">
+  <div class="bg" data-p="0.2"><img data-img="finalCta" alt="Snow peaks glowing above a quiet forested valley at sunrise" loading="lazy"></div>
+  <div class="c"><p class="lbl rv" style="color:#d9d2c0;margin-bottom:22px">Discovered in the hills</p><h2 class="rv">Don't just visit Uttarakhand. Discover it.</h2><a class="btn rv" href="#discover">Explore the untold <i>→</i></a></div>
+</section>
+
+<section class="pad nl" id="join">
+  <h2 class="rv">The mountains have more to say.</h2>
+  <div class="rv"><p style="color:var(--mut);margin-bottom:26px">Get occasional stories, hidden places, food discoveries and mountain adventures from UNTOLD.</p>
+  <form id="nf"><label for="em" class="lbl" style="position:absolute;left:-9999px">Your email</label><input id="em" type="email" placeholder="Your email" required autocomplete="email"><button class="btn" type="submit">Join UNTOLD <i>→</i></button></form><p id="ok" role="status"></p></div>
+</section>
+</main>
+
+<footer>
+  <div class="g">
+    <div><p class="serif" style="font-size:28px">The Uttarakhand you haven't seen.</p></div>
+    <ul><li class="lbl">Explore</li><li><a class="ul" href="#discover">Discover</a></li><li><a class="ul" href="#eat">Eat</a></li><li><a class="ul" href="#adventure">Adventure</a></li><li><a class="ul" href="#stay">Stay</a></li><li><a class="ul" href="#stories">Stories</a></li></ul>
+    <ul><li class="lbl">Business</li><li><a class="ul" href="#join">Work with us</a></li><li><a class="ul" href="#join">Submit a place</a></li><li><a class="ul" href="#join">Contact</a></li></ul>
+    <ul><li class="lbl">Social</li><li><a class="ul" href="#top">Instagram</a></li><li><a class="ul" href="#top">YouTube</a></li><li><a class="ul" href="#top">Facebook</a></li></ul>
+  </div>
+  <div class="big" aria-hidden="true">UNTOLD</div>
+  <div class="bt lbl"><span>Dehradun, Uttarakhand / India</span><span>© 2026 UNTOLD. All rights reserved.</span></div>
+</footer>
+
+<script>
+/* ====== IMAGES: edit ONLY this block to swap photographs (paths are relative to this HTML file) ====== */
+const IMAGES={
+  hero:"images/hero.jpg",
+  discover:{valley:"images/discover-valley.jpg",forest:"images/discover-forest.jpg",village:"images/discover-village.jpg",hidden:"images/discover-hidden.jpg"},
+  eat:"images/eat.jpg",
+  adventure:"images/adventure.jpg",
+  stay:"images/stay.jpg",
+  stories:{story1:"images/story-01.jpg",story2:"images/story-02.jpg",story3:"images/story-03.jpg",story4:"images/story-04.jpg"},
+  finalCta:"images/final-cta.jpg"
+};
+/* Optional focal points (CSS object-position), keyed like the images: e.g. "discover.forest":"50% 30%" */
+const FOCUS={hero:"center 62%",eat:"center 60%",adventure:"center 55%",stay:"35% center","discover.forest":"35% center","discover.valley":"60% 30%"};
+const img=k=>k.split('.').reduce((o,p)=>o&&o[p],IMAGES);
+const DISCOVER=[{t:'Hidden Places',d:'Quiet locations away from the usual tourist route.',i:'discover.hidden',a:'A quiet, little-visited spot in the Uttarakhand hills'},{t:'Mountain Villages',d:'Places where life moves differently.',i:'discover.village',a:'A Himalayan village with stone houses on terraced slopes'},{t:'Forest Roads',d:'Routes made for getting lost.',i:'discover.forest',a:'A trail through a deodar forest in Uttarakhand'},{t:'Secret Views',d:'The viewpoints nobody put on the itinerary.',i:'discover.valley',a:'A snow-capped Himalayan peak beside a deodar tree'}];
+const STORIES=[{c:'Places',t:'The road that disappears into the forest',r:'6 min',i:'stories.story1',a:'A road fading into the forest'},{c:'People',t:'The family who still cooks on wood fire',r:'8 min',i:'stories.story2',a:'A village kitchen with a wood fire'},{c:'Food',t:'A café at the end of the road',r:'5 min',i:'stories.story3',a:'A small mountain café at dusk'},{c:'People',t:'The dogs of the hills',r:'4 min',i:'stories.story4',a:'A dog resting on a mountain path'}];
+const pad=n=>String(n).padStart(2,'0');
+document.getElementById('dg').innerHTML=DISCOVER.map(x=>`<a class="dc rv" href="#discover"><div class="ir"><img data-img="${x.i}" alt="${x.a}" loading="lazy"></div><h3>${x.t}<i aria-hidden="true">↗</i></h3><p>${x.d}</p></a>`).join('');
+document.getElementById('sl').innerHTML=STORIES.map((s,n)=>`<a class="st rv" href="#stories"><span class="lbl">Untold story / ${pad(n+1)}</span><div class="ct"><span class="lbl">${s.c}</span><h3>${s.t}</h3></div><span class="th"><img data-img="${s.i}" alt="${s.a}" loading="lazy"></span><b class="rt">Read story → <span class="lbl" style="display:block">${s.r}</span></b></a>`).join('');
+document.querySelectorAll('[data-img]').forEach(i=>{const k=i.dataset.img;i.decoding='async';i.style.objectPosition=FOCUS[k]||'center';i.onerror=()=>{i.style.visibility='hidden'};i.src=img(k)});
+/* ---- behaviour ---- */
+const R=matchMedia('(prefers-reduced-motion:reduce)').matches,$=id=>document.getElementById(id);
+requestAnimationFrame(()=>requestAnimationFrame(()=>document.body.classList.add('loaded')));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('.rv,.ir').forEach((el,n)=>{el.style.transitionDelay=el.closest('.dg')?(n%4)*80+'ms':'';io.observe(el)});
+const hd=$('hd'),ps=[...document.querySelectorAll('[data-p]')];let tk=0;
+const tick=()=>{tk=0;const y=scrollY;hd.classList.toggle('s',y>60);if(!R)ps.forEach(el=>{const r=el.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight)el.style.transform=`translateY(${(r.top+r.height/2-innerHeight/2)*-el.dataset.p}px)`})};
+addEventListener('scroll',()=>{tk||(tk=requestAnimationFrame(tick))},{passive:true});tick();
+const m=$('menu'),b=$('bg');
+const tm=o=>{m.classList.toggle('o',o);m.setAttribute('aria-hidden',!o);b.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':'';(o?$('mc'):b).focus()};
+b.onclick=()=>tm(true);$('mc').onclick=()=>tm(false);m.querySelectorAll('a').forEach(a=>a.onclick=()=>tm(false));
+addEventListener('keydown',e=>{if(e.key==='Escape'&&m.classList.contains('o'))tm(false)});
+/* story hover preview: follows the cursor on hover devices */
+const pv=document.createElement('div');pv.className='pv';pv.setAttribute('aria-hidden','true');pv.innerHTML='<img alt="">';document.body.appendChild(pv);
+if(matchMedia('(hover:hover)').matches&&!R){const pi=pv.firstChild;let tx=0,ty=0,x=0,y=0,on=0,raf=0;
+const loop=()=>{x+=(tx-x)*.14;y+=(ty-y)*.14;pv.style.transform=`translate(${x}px,${y}px) rotate(${Math.max(-6,Math.min(6,(tx-x)*.04))}deg)`;raf=on||Math.abs(tx-x)>.5?requestAnimationFrame(loop):0};
+document.querySelectorAll('.st').forEach((r,n)=>{
+r.addEventListener('mouseenter',e=>{const k=STORIES[n].i;pi.style.objectPosition=FOCUS[k]||'center';pi.src=img(k);tx=e.clientX+40;ty=e.clientY-162;if(!on){x=tx;y=ty}on=1;pv.classList.add('on');raf||(raf=requestAnimationFrame(loop))});
+r.addEventListener('mousemove',e=>{tx=e.clientX+40;ty=e.clientY-162});
+r.addEventListener('mouseleave',()=>{on=0;pv.classList.remove('on')})})}
+$('nf').onsubmit=e=>{e.preventDefault();$('ok').textContent='You\'re on the list. The mountains will be in touch.';e.target.reset()};
+</script>
+</body>
+</html>
