@@ -7,7 +7,7 @@
 <meta name="description" content="Discover hidden places, mountain food, local stories, adventures, stays and experiences across Uttarakhand with UNTOLD.">
 <meta property="og:title" content="UNTOLD — Discover the Uttarakhand You Haven't Seen">
 <meta property="og:description" content="Hidden places, mountain food, local stories and adventures across Uttarakhand.">
-<meta property="og:type" content="website">
+<meta property="og:type" content="website">\n<meta name="theme-color" content="#121311">\n<meta name="robots" content="index,follow">\n<link rel="canonical" href="https://abhishek-assignment-latest.vanguardtechlabs.workers.dev/">\n<meta property="og:url" content="https://abhishek-assignment-latest.vanguardtechlabs.workers.dev/">\n<meta property="og:site_name" content="UNTOLD">\n<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -150,8 +150,8 @@ nav.d,header>.btn{display:none}.burger{display:block}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 .rv,.fd,.ln>span,.ir>img{opacity:1;transform:none;clip-path:none}.hero .bg{clip-path:none}}
-</style>
-</head>
+\n.img-missing{background:linear-gradient(135deg,#24362d,#6f8b78 52%,#c8b99b);position:relative}.img-missing::after{content:"UNTOLD / UTTARAKHAND";position:absolute;left:24px;bottom:20px;color:#efe9dd;font:500 11px Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;opacity:.8}\n@media(max-width:600px){.hero{padding-bottom:30px}.hero h1{font-size:clamp(42px,13vw,70px)}.pad{padding-top:80px;padding-bottom:80px}.mq div{gap:28px;padding-right:28px}.st{padding:20px 0}.st:hover{padding-left:0}.cta{min-height:75svh}footer{padding-top:60px}}\n</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"UNTOLD","url":"https://abhishek-assignment-latest.vanguardtechlabs.workers.dev/","description":"Discover hidden places, mountain food, local stories, adventures, stays and experiences across Uttarakhand with UNTOLD.","inLanguage":"en-IN"}</script>\n</head>
 <body>
 <header id="hd">
   <a href="#top" class="logo" aria-label="UNTOLD home">UNTOLD</a>
@@ -257,13 +257,13 @@ nav.d,header>.btn{display:none}.burger{display:block}
 <script>
 /* ====== IMAGES: edit ONLY this block to swap photographs (paths are relative to this HTML file) ====== */
 const IMAGES={
-  hero:"images/hero.jpg",
-  discover:{valley:"images/discover-valley.jpg",forest:"images/discover-forest.jpg",village:"images/discover-village.jpg",hidden:"images/discover-hidden.jpg"},
-  eat:"images/eat.jpg",
-  adventure:"images/adventure.jpg",
-  stay:"images/stay.jpg",
-  stories:{story1:"images/story-01.jpg",story2:"images/story-02.jpg",story3:"images/story-03.jpg",story4:"images/story-04.jpg"},
-  finalCta:"images/final-cta.jpg"
+  hero:"images/hero.svg",
+  discover:{valley:"images/discover-valley.svg",forest:"images/discover-forest.svg",village:"images/discover-village.svg",hidden:"images/discover-hidden.svg"},
+  eat:"images/eat.svg",
+  adventure:"images/adventure.svg",
+  stay:"images/stay.svg",
+  stories:{story1:"images/story-01.svg",story2:"images/story-02.svg",story3:"images/story-03.svg",story4:"images/story-04.svg"},
+  finalCta:"images/final-cta.svg"
 };
 /* Optional focal points (CSS object-position), keyed like the images: e.g. "discover.forest":"50% 30%" */
 const FOCUS={hero:"center 62%",eat:"center 60%",adventure:"center 55%",stay:"35% center","discover.forest":"35% center","discover.valley":"60% 30%"};
@@ -273,7 +273,7 @@ const STORIES=[{c:'Places',t:'The road that disappears into the forest',r:'6 min
 const pad=n=>String(n).padStart(2,'0');
 document.getElementById('dg').innerHTML=DISCOVER.map(x=>`<a class="dc rv" href="#discover"><div class="ir"><img data-img="${x.i}" alt="${x.a}" loading="lazy"></div><h3>${x.t}<i aria-hidden="true">↗</i></h3><p>${x.d}</p></a>`).join('');
 document.getElementById('sl').innerHTML=STORIES.map((s,n)=>`<a class="st rv" href="#stories"><span class="lbl">Untold story / ${pad(n+1)}</span><div class="ct"><span class="lbl">${s.c}</span><h3>${s.t}</h3></div><span class="th"><img data-img="${s.i}" alt="${s.a}" loading="lazy"></span><b class="rt">Read story → <span class="lbl" style="display:block">${s.r}</span></b></a>`).join('');
-document.querySelectorAll('[data-img]').forEach(i=>{const k=i.dataset.img;i.decoding='async';i.style.objectPosition=FOCUS[k]||'center';i.onerror=()=>{i.style.visibility='hidden'};i.src=img(k)});
+document.querySelectorAll('[data-img]').forEach(i=>{const k=i.dataset.img;i.decoding='async';i.style.objectPosition=FOCUS[k]||'center';i.onerror=()=>{i.removeAttribute('src');i.parentElement?.classList.add('img-missing')};i.src=img(k)});
 /* ---- behaviour ---- */
 const R=matchMedia('(prefers-reduced-motion:reduce)').matches,$=id=>document.getElementById(id);
 requestAnimationFrame(()=>requestAnimationFrame(()=>document.body.classList.add('loaded')));
