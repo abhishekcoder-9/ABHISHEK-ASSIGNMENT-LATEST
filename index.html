@@ -193,7 +193,7 @@ nav.d,header>.btn{display:none}.burger{display:block}
 </section>
 
 <section class="pad eat" id="eat">
-  <div class="ir"><img data-img="eat" alt="A chai maker pouring tea through steam in warm evening light" loading="lazy"></div>
+  <div class="ir"><img data-img="eat" alt="A plate of food from a cafe in Dehradun, Uttarakhand" loading="lazy"></div>
   <div>
     <p class="lbl rv">02 / Eat — Food / 04</p>
     <h2 class="rv" style="margin-top:14px;font-size:clamp(30px,4vw,60px)">A taste of the mountains.</h2>
@@ -206,7 +206,7 @@ nav.d,header>.btn{display:none}.burger{display:block}
 
 <section class="pad dk adv" id="adventure">
   <div class="sh"><div><p class="lbl rv" style="color:#a9a496">03 / Adventure — Adventure / 07</p><h2 class="rv" style="margin-top:14px">Take the longer way.</h2></div></div>
-  <div class="ir big"><img data-img="adventure" alt="Trekkers on a snow-covered Himalayan ridge under a blue sky" loading="lazy" data-p="0.08"></div>
+  <div class="ir big"><img data-img="adventure" alt="A paraglider soaring above the mountains of Bir Billing" loading="lazy" data-p="0.08"></div>
   <div class="row">
     <div><p class="lbl" style="color:#a9a496">Featured / Bir Billing</p><h3 class="rv" style="margin-top:12px">Fly above the valley.</h3></div>
     <div><p class="rv">Paragliding is one of many ways to see the hills differently. UNTOLD discovers and documents experiences like this — and may one day partner with legitimate local operators.</p><a class="btn rv" href="#stories">Find your adventure <i>→</i></a></div>
@@ -217,7 +217,7 @@ nav.d,header>.btn{display:none}.burger{display:block}
 <section class="pad stay" id="stay">
   <div class="sy">
     <div><p class="lbl rv">04 / Stay</p><h2 class="rv" style="margin-top:14px">Stay somewhere worth remembering.</h2><p class="rv">Mountain homestays, cabins, forest retreats and village stays — presented as places, not booking listings.</p><a class="btn rv" href="#stories">Find your stay <i>→</i></a></div>
-    <div class="ir"><img data-img="stay" alt="A small white shrine among pines on an Uttarakhand hillside" loading="lazy"></div>
+    <div class="ir"><img data-img="stay" alt="A small mountain cabin on a lush green hillside in Uttarakhand" loading="lazy"></div>
   </div>
 </section>
 
@@ -264,19 +264,19 @@ const IMAGES={
     village:"https://images.unsplash.com/photo-1758431244850-c53fe26acc3a?auto=format&fit=crop&fm=jpg&q=85&w=1600",
     hidden:"https://images.unsplash.com/photo-1667029839572-1340a6dfc378?auto=format&fit=crop&fm=jpg&q=85&w=1600"
   },
-  eat:"https://images.unsplash.com/photo-1701502461878-2c8b8120a033?auto=format&fit=crop&fm=jpg&q=85&w=1600",
-  adventure:"https://images.unsplash.com/photo-1623692781109-898688d33165?auto=format&fit=crop&fm=jpg&q=85&w=1600",
-  stay:"https://images.unsplash.com/photo-1598609970679-53239f2ede82?auto=format&fit=crop&fm=jpg&q=85&w=1600",
+  eat:"https://images.unsplash.com/photo-1661082568383-d31c9a87061f?auto=format&fit=crop&fm=jpg&q=85&w=1600",
+  adventure:"https://images.unsplash.com/photo-1769963608832-cc25836772e1?auto=format&fit=crop&fm=jpg&q=85&w=1800",
+  stay:"https://images.unsplash.com/photo-1734383641634-2a69d3f04283?auto=format&fit=crop&fm=jpg&q=85&w=1600",
   stories:{
     story1:"https://images.unsplash.com/photo-1758431244850-c53fe26acc3a?auto=format&fit=crop&fm=jpg&q=85&w=1600",
-    story2:"https://images.unsplash.com/photo-1701502461878-2c8b8120a033?auto=format&fit=crop&fm=jpg&q=85&w=1600",
+    story2:"https://images.unsplash.com/photo-1661082568383-d31c9a87061f?auto=format&fit=crop&fm=jpg&q=85&w=1600",
     story3:"https://images.unsplash.com/photo-1667029839572-1340a6dfc378?auto=format&fit=crop&fm=jpg&q=85&w=1600",
-    story4:"https://images.unsplash.com/photo-1598609970679-53239f2ede82?auto=format&fit=crop&fm=jpg&q=85&w=1600"
+    story4:"https://images.unsplash.com/photo-1734383641634-2a69d3f04283?auto=format&fit=crop&fm=jpg&q=85&w=1600"
   },
   finalCta:"https://images.unsplash.com/photo-1777355370389-cfc8ee6e9ad5?auto=format&fit=crop&fm=jpg&q=85&w=1800"
 };
 /* Optional focal points (CSS object-position), keyed like the images: e.g. "discover.forest":"50% 30%" */
-const FOCUS={hero:"center 62%",eat:"center 60%",adventure:"center 55%",stay:"35% center","discover.forest":"35% center","discover.valley":"60% 30%"};
+const FOCUS={hero:"center 62%",eat:"center 50%",adventure:"center 45%",stay:"center 50%","discover.forest":"35% center","discover.valley":"60% 30%"};
 const img=k=>k.split('.').reduce((o,p)=>o&&o[p],IMAGES);
 const DISCOVER=[{t:'Hidden Places',d:'Quiet locations away from the usual tourist route.',i:'discover.hidden',a:'A quiet, little-visited spot in the Uttarakhand hills'},{t:'Mountain Villages',d:'Places where life moves differently.',i:'discover.village',a:'A Himalayan village with stone houses on terraced slopes'},{t:'Forest Roads',d:'Routes made for getting lost.',i:'discover.forest',a:'A trail through a deodar forest in Uttarakhand'},{t:'Secret Views',d:'The viewpoints nobody put on the itinerary.',i:'discover.valley',a:'A snow-capped Himalayan peak beside a deodar tree'}];
 const STORIES=[{c:'Places',t:'The road that disappears into the forest',r:'6 min',i:'stories.story1',a:'A road fading into the forest'},{c:'People',t:'The family who still cooks on wood fire',r:'8 min',i:'stories.story2',a:'A village kitchen with a wood fire'},{c:'Food',t:'A café at the end of the road',r:'5 min',i:'stories.story3',a:'A small mountain café at dusk'},{c:'People',t:'The dogs of the hills',r:'4 min',i:'stories.story4',a:'A dog resting on a mountain path'}];
